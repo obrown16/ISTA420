@@ -1,0 +1,33 @@
+Readings
+Read chapter 2 of the textbook T-SQL Fundamentals, pages 27 through 49.
+Homework questions
+1. What is a primary key constraint? What two other constraints is it equivilent to? pg 22
+A primary key constraint enforces the uniquesness of rows and also disallows NULLs in the constraint
+attributes. Uniquely identifies each record on a database. Equivalent to unique constraint and not nullable.
+2. What is a nullability constraint? What does it prevent? 
+Prevents columns from accepting NULL values. 
+3. What is a unique constraint? What does it prevent? pg 23
+Unique constraint enforces the uniquesness of rows, allowing you to implement the concept of alternate keys
+from the relational model in your database. Prevents duplicate values stored in specific columns that do 
+not participate a primary key. (cannot have 2 of the same kind of value in that column)
+4. What is a foreign key constraint? What does it allow? pg 23
+A foreign-key constraint enforces referential integrity. It is defined on one or more attributes in what's
+called the referencing table and points to candidate-key (Primary key or unique constraint) attributes 
+in what's called the refernced table. Allows you to restrict the values allowed in the foeigned key columns
+to those that exist in the referenced columns. (
+5. What is a check constraint? What does it allow? 
+Check constraints can be used to define a predicate that a row must meet to be entered into the table or 
+to be modified. Allows us to be very specific on the data that is allowed (ex. between value 1 to value 10, ex. drinking
+age check constraint...=>21). A way of enforcing a business rule. 
+6. What is a default constraint? What does it allow?
+Default constraint is associated with a particular attribute and is an expression that is used as the default value when 
+an explicit value is not specified for the attribute when you insert a row.
+7. What is domain integrity? This is not in your text book, but it’s important.
+means our data is within the allowed values. 
+8. What is the difference between the where and the having clauses? How are they alile?
+WHERE clause is a row filter and HAVING clause is a group filter. Both filter from  data that the predicate is evaluated
+to be TRUE and are returned to next query processing phase and FALSE or UNKNOWN are discarded
+9. What SQL operator has the highest precedence? What SQL operator has the lowest precedence? pg 51
+() (Parenthes) has the highest. =(Assignment) has the lowest.
+10. Yes or no: In the SQL standard, is NULL equal to NULL? Why or why not? 
+No, because the value of each NULL is unknown. 2 objects unknown cannot equal to each other.
